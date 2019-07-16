@@ -113,7 +113,9 @@ public class GuestbookPortlet extends MVCPortlet {
 	}
 	
 	public void deleteEntry(ActionRequest request, ActionResponse response) throws PortalException {
+		
 		long entryId = ParamUtil.getLong(request, "entryId");
+		
 		long guestbookId = ParamUtil.getLong(request, "guestbookId");
 		
 		ServiceContext serviceContext = ServiceContextFactory.getInstance(Entry.class.getName(), request);
